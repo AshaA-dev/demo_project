@@ -1,0 +1,13 @@
+<h1>hiiiiiii</h1>
+
+
+<form method="post">
+    {% csrf_token %}
+    <textarea name="prompt" placeholder="Enter" cols="60" rows="6"></textarea><br>
+    <button type="submit">Generate</button>
+</form>
+
+{% if response %}
+<h2>RESPONSE :</h2>
+<p>{{ response }}</p>
+{% endif %}
